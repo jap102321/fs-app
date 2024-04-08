@@ -4,7 +4,7 @@ import PostCard from '@/components/postCard/PostCard';
 
 const getData = async () => {
   const res = await fetch('http://localhost:3000/api/blog', {
-    next: { revalidate: 3600 },
+    next: { revalidate: 30 },
   });
 
   if (!res.ok) {

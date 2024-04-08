@@ -23,10 +23,9 @@ export const DELETE = async (request, { params }) => {
     connectToDb();
 
     await Post.deleteOne({ slug });
-
-    return NextResponse.json('Post deleted.');
+    return NextResponse.json('Post deleted');
   } catch (err) {
     console.log(err);
-    throw new Error('Failed to fetch post!');
+    throw new Error('Failed to delete post!');
   }
 };
